@@ -4,11 +4,23 @@
 //
 
 import WatchKit
+import Combine
+import BitcodeBugSwiftPackage
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
+    var model = Model()
+    var cancellable: AnyCancellable?
+    
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
+        self.cancellable = model.publisher(for: \.counter).sink { (value) in
+            print("Counter changed: \(value)")
+        }
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] (timer) in
+            guard let self = self else { return }
+            self.model.counter += 1
+        }
     }
 
     func applicationDidBecomeActive() {

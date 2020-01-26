@@ -4,14 +4,25 @@
 //
 
 import UIKit
+import Combine
+import BitcodeBugSwiftPackage
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var model = Model()
+    var cancellable: AnyCancellable?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.cancellable = model.publisher(for: \.counter).sink { (value) in
+            print("Counter changed: \(value)")
+        }
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] (timer) in
+            guard let self = self else { return }
+            self.model.counter += 1
+        }
+
         return true
     }
 

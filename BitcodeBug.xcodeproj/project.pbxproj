@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,8 @@
 		2D4C55DE23DD8E9D00A03B6F /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4C55DD23DD8E9D00A03B6F /* ExtensionDelegate.swift */; };
 		2D4C55E023DD8E9E00A03B6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D4C55DF23DD8E9E00A03B6F /* Assets.xcassets */; };
 		2D4C55E323DD8E9E00A03B6F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D4C55E223DD8E9E00A03B6F /* Preview Assets.xcassets */; };
+		2D78C5B023DD96C900EC9FDF /* BitcodeBugSwiftPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 2D78C5AF23DD96C900EC9FDF /* BitcodeBugSwiftPackage */; };
+		2D78C5B223DD976900EC9FDF /* BitcodeBugSwiftPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 2D78C5B123DD976900EC9FDF /* BitcodeBugSwiftPackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,7 @@
 		2D4C55DF23DD8E9E00A03B6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D4C55E223DD8E9E00A03B6F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2D4C55E423DD8E9E00A03B6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D78C5AD23DD967600EC9FDF /* BitcodeBugSwiftPackage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BitcodeBugSwiftPackage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D78C5B223DD976900EC9FDF /* BitcodeBugSwiftPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D78C5B023DD96C900EC9FDF /* BitcodeBugSwiftPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,10 +114,12 @@
 		2D4C55A823DD8E9B00A03B6F = {
 			isa = PBXGroup;
 			children = (
+				2D78C5AD23DD967600EC9FDF /* BitcodeBugSwiftPackage */,
 				2D4C55B323DD8E9B00A03B6F /* BitcodeBug */,
 				2D4C55C923DD8E9C00A03B6F /* BitcodeBug WatchKit App */,
 				2D4C55D823DD8E9D00A03B6F /* BitcodeBug WatchKit Extension */,
 				2D4C55B223DD8E9B00A03B6F /* Products */,
+				2D78C5AE23DD96C900EC9FDF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,6 +186,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		2D78C5AE23DD96C900EC9FDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -197,6 +211,9 @@
 				2D4C55C823DD8E9C00A03B6F /* PBXTargetDependency */,
 			);
 			name = BitcodeBug;
+			packageProductDependencies = (
+				2D78C5B123DD976900EC9FDF /* BitcodeBugSwiftPackage */,
+			);
 			productName = BitcodeBug;
 			productReference = 2D4C55B123DD8E9B00A03B6F /* BitcodeBug.app */;
 			productType = "com.apple.product-type.application";
@@ -231,6 +248,9 @@
 			dependencies = (
 			);
 			name = "BitcodeBug WatchKit Extension";
+			packageProductDependencies = (
+				2D78C5AF23DD96C900EC9FDF /* BitcodeBugSwiftPackage */,
+			);
 			productName = "BitcodeBug WatchKit Extension";
 			productReference = 2D4C55D423DD8E9D00A03B6F /* BitcodeBug WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
@@ -643,6 +663,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2D78C5AF23DD96C900EC9FDF /* BitcodeBugSwiftPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BitcodeBugSwiftPackage;
+		};
+		2D78C5B123DD976900EC9FDF /* BitcodeBugSwiftPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BitcodeBugSwiftPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2D4C55A923DD8E9B00A03B6F /* Project object */;
 }

@@ -2,7 +2,7 @@
 
 1. Given an iOS app with a Watch app Xcode project.
 2. Both iOS app and WatchKit extension targets link a library obtained from a Swift package.
-3. An object in the WatchKit extension uses KVO to observe changes to an object inside the library.
+3. An object in the WatchKit extension uses KVO to observe changes to an object from inside the library.
 4. The watchOS app crashes if it is recompiled with bitcode.
 
 ## Steps the reproduce with the BitcodeBug Xcode project
